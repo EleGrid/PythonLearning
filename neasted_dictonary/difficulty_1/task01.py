@@ -11,7 +11,7 @@
 """
 
 
-def get_child_name(child):
+def get_child_name(child: dict) -> str:
     return child['name']
 
 
