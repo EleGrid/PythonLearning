@@ -11,9 +11,8 @@
 """
 
 
-def get_child_name(child):
-    # Your code here
-    pass
+def get_child_name(child: dict) -> str:
+    return child['name']
 
 
 # === Тесты ===
