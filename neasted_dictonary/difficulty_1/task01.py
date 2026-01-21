@@ -12,8 +12,7 @@
 
 
 def get_child_name(child):
-    # Your code here
-    pass
+    return child['name']
 
 
 # === Тесты ===
