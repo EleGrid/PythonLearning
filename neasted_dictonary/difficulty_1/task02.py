@@ -12,8 +12,8 @@
 
 
 def get_child_age(child):
-    # Your code here
-    pass
+    return child['age']
+
 
 
 # === Тесты ===
