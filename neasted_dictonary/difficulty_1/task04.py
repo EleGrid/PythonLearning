@@ -11,9 +11,9 @@
 """
 
 
-def get_all_keys(data):
-    # Your code here
-    pass
+def get_all_keys(data: dict):
+    return list(data.keys())
+
 
 
 # === Тесты ===
