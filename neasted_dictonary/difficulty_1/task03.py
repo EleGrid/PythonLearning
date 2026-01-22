@@ -11,9 +11,9 @@
 """
 
 
-def get_value(data, key):
-    # Your code here
-    pass
+def get_value(data: dict, key: str):
+    return data[key]
+
 
 
 # === Тесты ===
