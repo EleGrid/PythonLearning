@@ -14,8 +14,12 @@
 
 
 def has_key(data, key):
-    # Your code here
-    pass
+    if key in data:
+        return True
+    else:
+        return False
+
+
 
 
 # === Тесты ===
