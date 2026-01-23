@@ -15,8 +15,11 @@
 
 
 def has_address(child):
-    # Your code here
-    pass
+    if 'address' in child:
+        return True
+    else:
+        return False
+
 
 
 # === Тесты ===
