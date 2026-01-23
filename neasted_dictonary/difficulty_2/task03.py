@@ -12,8 +12,7 @@
 
 
 def count_rooms(apartment):
-    # Your code here
-    pass
+    return len(apartment['rooms'])
 
 
 # === Тесты ===

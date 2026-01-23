@@ -12,8 +12,8 @@
 
 
 def get_first_hobby(child):
-    # Your code here
-    pass
+    return child['hobbies'][0]
+
 
 
 # === Тесты ===
