@@ -77,7 +77,7 @@ def make_a_coffee(coffee_name: str):
     for key in ingredients:
         required_ingredient = ingredients[key]
         resources[key] = resources[key] - required_ingredient
-    print(f"Here is your {coffee_name}. Enjoy!!!")
+    print(f"Here is your {coffee_name}☕. Enjoy!!!")
 
 
 
