@@ -13,8 +13,8 @@
 
 
 def get_grade(student, subject):
-    # Your code here
-    pass
+    return student['grades'][subject]
+
 
 
 # === Тесты ===
