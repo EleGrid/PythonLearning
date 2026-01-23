@@ -11,9 +11,9 @@
 """
 
 
-def get_city(child):
-    # Your code here
-    pass
+def get_city(child: dict) -> str:
+    return child['address']['city']
+
 
 
 # === Тесты ===
