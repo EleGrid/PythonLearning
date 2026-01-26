@@ -12,7 +12,9 @@
 
 
 def get_full_address(data:dict) -> str:
-   return data['address']['city'] + ", " + data['address']['street']
+    address = data['address']
+    return  f"{address['city']}, {address['street']}"
+
 
 
 # === Тесты ===
