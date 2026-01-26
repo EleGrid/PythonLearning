@@ -12,11 +12,18 @@
     >>> safe_get(data, ["child", "preferences", "food"], "unknown")
     'unknown'
 """
+from copy import copy
 
 
 def safe_get(data, keys, default):
-    # Your code here
-    pass
+    some_value = copy(data)
+    for key in keys:
+        if key in some_value:
+            some_value = some_value[key]
+        else:
+            return default
+    return some_value
+
 
 
 # === Тесты ===
