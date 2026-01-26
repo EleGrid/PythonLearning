@@ -15,8 +15,12 @@
 
 
 def get_all_hobbies(family):
-    # Your code here
-    pass
+    uniq_hobby = set()
+    for kid_value in family.values():
+        hobbies = kid_value['hobbies']
+        uniq_hobby.update(hobbies)
+    return list(uniq_hobby)
+
 
 
 # === Тесты ===
