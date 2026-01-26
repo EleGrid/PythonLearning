@@ -11,9 +11,10 @@
 """
 
 
-def get_full_address(data):
-    # Your code here
-    pass
+def get_full_address(data:dict) -> str:
+    address = data['address']
+    return  f"{address['city']}, {address['street']}"
+
 
 
 # === Тесты ===

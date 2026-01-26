@@ -16,8 +16,11 @@
 
 
 def count_total_items(shopping):
-    # Your code here
-    pass
+      total = 0
+      for category in shopping.values():
+          for product_value in category.values():
+              total = total + product_value
+      return  total
 
 
 # === Тесты ===
