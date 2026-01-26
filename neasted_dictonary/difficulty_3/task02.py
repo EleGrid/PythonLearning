@@ -13,8 +13,17 @@
 
 
 def get_average_grade(student):
-    # Your code here
-    pass
+    marks = 0
+    grades = student['grades']
+    if len(grades) == 0:
+        return 0
+    for key in grades:
+       marks = marks + grades[key]
+    ave = marks/ len(grades)
+    return ave
+
+
+
 
 
 # === Тесты ===
@@ -37,6 +46,10 @@ class TestGetAverageGrade(unittest.TestCase):
     def test_many_subjects(self):
         student = {"name": "Gleb", "grades": {"a": 3, "b": 4, "c": 5, "d": 4}}
         self.assertEqual(get_average_grade(student), 4.0)
+
+    def test_zero_subjects(self):
+        student = {"name": "Gleb", "grades": {}}
+        self.assertEqual(get_average_grade(student), 0)
 
 
 if __name__ == "__main__":
