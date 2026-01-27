@@ -14,8 +14,18 @@
 
 
 def merge_shopping(dict1: dict, dict2: dict) -> dict:
-    # Your code here
-    pass
+    for category in dict2:
+        if category not in dict1:
+            dict1[category] = dict2[category]
+            continue
+
+        for product in dict2[category]:
+            if product in dict1[category]:
+                dict1[category][product] += dict2[category][product]
+            else:
+                dict1[category][product] = dict2[category][product]
+
+    return dict1
 
 
 # === Тесты ===
