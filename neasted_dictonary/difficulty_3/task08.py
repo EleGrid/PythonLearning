@@ -12,8 +12,12 @@
 
 
 def find_max_value(data: dict) -> int:
-    # Your code here
-    pass
+    max_price = None
+    for products in data.values():
+        for price in products.values():
+            if max_price is None or price > max_price:
+                max_price = price
+    return max_price
 
 
 # === Тесты ===
