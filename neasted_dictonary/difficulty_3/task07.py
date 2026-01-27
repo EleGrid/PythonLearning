@@ -13,8 +13,11 @@
 
 
 def get_inner_keys(data: dict) -> list:
-    # Your code here
-    pass
+    key_list = []
+    for key_1 in data.values():
+        for key_2 in key_1:
+            key_list.append(key_2)
+    return key_list
 
 
 # === Тесты ===
