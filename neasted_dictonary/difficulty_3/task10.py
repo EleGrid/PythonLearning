@@ -14,8 +14,12 @@
 
 
 def safe_get(data: dict, key1: str, key2: str):
-    # Your code here
-    pass
+    if key1 in data:
+        if key2 in data[key1]:
+            return  data[key1][key2]
+    else:
+        return None
+
 
 
 # === Тесты ===

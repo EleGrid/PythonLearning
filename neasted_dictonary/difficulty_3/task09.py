@@ -13,8 +13,10 @@
 
 
 def count_items(data: dict) -> int:
-    # Your code here
-    pass
+    count_product = 0
+    for category in data.values():
+            count_product += len(category)
+    return count_product
 
 
 # === Тесты ===

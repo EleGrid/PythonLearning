@@ -12,8 +12,12 @@
 
 
 def total_expenses(data: dict) -> int:
-    # Your code here
-    pass
+    expanses = 0
+    for spending in data.values():
+        for staff in spending.values():
+            expanses = expanses + staff
+    return expanses
+
 
 
 # === Тесты ===
