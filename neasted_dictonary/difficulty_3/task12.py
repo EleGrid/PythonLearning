@@ -13,8 +13,17 @@
 
 
 def filter_by_price(data: dict, min_price: int) -> dict:
-    # Your code here
-    pass
+    min_price_dict = {}
+    for category in data.keys():
+        for product in data[category]:
+            if data[category][product] < min_price:
+                continue
+            if category not in min_price_dict:
+                min_price_dict[category] = {}
+            min_price_dict[category][product] = data[category][product]
+    return min_price_dict
+
+
 
 
 # === Тесты ===
