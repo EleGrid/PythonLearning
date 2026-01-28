@@ -12,8 +12,13 @@
 
 
 def get_all_values(data: dict) -> list:
-    # Your code here
-    pass
+        list_value = []
+        for category in data.values():
+            for product in category.values():
+                list_value.append(product)
+
+        return list_value
+
 
 
 # === Тесты ===
