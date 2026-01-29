@@ -12,9 +12,11 @@
 
 
 def remove_empty(data: dict) -> dict:
-    # Your code here
-    pass
-
+    new_dict = {}
+    for category in data:
+        if len(data[category]) != 0:
+            new_dict[category] = data[category]
+    return new_dict
 
 # === Тесты ===
 import unittest
