@@ -13,8 +13,15 @@
 
 
 def group_by_age(data: dict) -> dict:
-    # Your code here
-    pass
+    age_dict = {}
+    for name_key in data:
+        group_age = data[name_key]['age']
+        if group_age not in age_dict:
+            age_dict[group_age] = []
+        our_list = age_dict[group_age]
+        our_list.append(name_key)
+    return age_dict
+
 
 
 # === Тесты ===
