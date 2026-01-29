@@ -12,8 +12,12 @@
 
 
 def count_non_empty(data: dict) -> int:
-    # Your code here
-    pass
+    count = 0
+    for category in data:
+        if len(data[category]) > 0:
+            count = count + 1
+    return count
+
 
 
 # === Тесты ===
