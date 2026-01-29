@@ -13,8 +13,11 @@
 
 
 def invert_location(data: dict) -> dict:
-    # Your code here
-    pass
+    item_room = {}
+    for room_key in data:
+        for item_key in data[room_key]:
+            item_room[item_key] = room_key
+    return item_room
 
 
 # === Тесты ===
