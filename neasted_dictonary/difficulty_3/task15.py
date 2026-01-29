@@ -14,9 +14,8 @@
 
 
 def has_item(data: dict, outer_key: str, inner_key: str) -> bool:
-        if outer_key in data:
-            if inner_key in data[outer_key]:
-                return True
+        if outer_key in data and inner_key in data[outer_key]:
+            return True
         else:
             return False
 
