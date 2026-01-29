@@ -12,8 +12,18 @@
 
 
 def average_grade(data: dict, student: str) -> float:
-    # Your code here
-    pass
+    if student not in data:
+        return 0.0
+    number_len = 0
+    number_sum = 0
+    for subject in data[student]:
+        number_sum = number_sum + data[student][subject]
+        number_len = number_len + 1
+    total = number_sum/number_len
+    return total
+
+
+
 
 
 # === Тесты ===
