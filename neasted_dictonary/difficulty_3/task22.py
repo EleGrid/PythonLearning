@@ -1,20 +1,22 @@
 """
-Задача: Сортировка по значению
+    Задача: Сортировка по значению
 
-Глеб хочет отсортировать продукты по цене. Напиши функцию, которая принимает
-словарь с ценами и возвращает список товаров, отсортированных по цене.
+    Глеб хочет отсортировать продукты по цене. Напиши функцию, которая принимает
+    словарь с ценами и возвращает список товаров, отсортированных по цене.
 
-Пример:
-    >>> prices = {"dairy": {"milk": 80, "cheese": 250, "yogurt": 45}}
-    >>> sort_by_price(prices, "dairy")
-    ['yogurt', 'milk', 'cheese']
-"""
+    Пример:
+        >>> prices = {"dairy": {"milk": 80, "cheese": 250, "yogurt": 45}}
+        >>> sort_by_price(prices, "dairy")
+        ['yogurt', 'milk', 'cheese']
+    """
 
 
 def sort_by_price(data: dict, category: str) -> list:
-    # Your code here
-    pass
-
+    if category not in data:
+        return []
+    items: dict = data[category]
+    sorted_list = sorted(items, key = items.get)
+    return sorted_list
 
 # === Тесты ===
 import unittest
