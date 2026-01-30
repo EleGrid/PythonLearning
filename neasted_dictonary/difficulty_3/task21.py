@@ -12,9 +12,12 @@
 
 
 def flatten_dict(data: dict) -> dict:
-    # Your code here
-    pass
-
+    new_dict = {}
+    for key_1 in data:
+        for key_2 in data[key_1]:
+            new_key = f"{key_1}.{key_2}"
+            new_dict[new_key] = data[key_1][key_2]
+    return new_dict
 
 # === Тесты ===
 import unittest
