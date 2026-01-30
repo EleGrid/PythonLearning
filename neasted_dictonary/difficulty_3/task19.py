@@ -13,8 +13,10 @@
 
 
 def find_by_value(data: dict, value: int) -> str:
-    # Your code here
-    pass
+    for category in data:
+        for product in data[category]:
+            if data[category][product] == value:
+                return product
 
 
 # === Тесты ===
