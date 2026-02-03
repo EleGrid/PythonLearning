@@ -15,8 +15,7 @@ import unittest
 
 class Dinner:
     def __init__(self, dish_name):
-        # Bug is here: the assignment is missing or wrong
-        dish_name = dish_name # This just assigns to local variable, fix it!
+        self.dish_name = dish_name
 
 class TestDinner(unittest.TestCase):
     def test_soup(self):
