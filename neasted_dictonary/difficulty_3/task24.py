@@ -12,8 +12,15 @@
 
 
 def largest_category(data: dict) -> str:
-    # Your code here
-    pass
+    max_category = None
+    max_count = 0
+    for category, products in data.items():
+        current_count = len(products)
+        if current_count > max_count:
+            max_count = current_count
+            max_category = category
+    return max_category
+
 
 
 # === Тесты ===
