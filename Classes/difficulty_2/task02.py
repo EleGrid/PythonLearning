@@ -25,9 +25,11 @@ class Child:
         self.energy = 100
 
     def play(self):
-        # Modify this method
-        self.energy -= 20
-        return "Playing!"
+        if self.energy <= 0:
+            return "Tired..."
+        else:
+            self.energy -= 20
+            return "Playing!"
 
 
 class TestChildPlay(unittest.TestCase):
