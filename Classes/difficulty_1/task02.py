@@ -14,8 +14,8 @@ import unittest
 """
 
 class CleaningSchedule:
-    # Your code here
-    pass
+    def __init__(self, rooms):
+        self.rooms_to_clean = rooms
 
 
 class TestCleaningSchedule(unittest.TestCase):
