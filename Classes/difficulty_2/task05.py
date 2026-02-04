@@ -17,9 +17,11 @@ import unittest
 """
 
 class SchoolDiary:
-    def grade_homework(self, score):
-        # Your code here
-        pass
+    def grade_homework(self, score) -> str:
+        if score in [4,5]:
+            return "Good job!"
+        else:
+            return "Try better!"
 
 
 class TestSchoolDiary(unittest.TestCase):
