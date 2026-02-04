@@ -21,8 +21,18 @@ import unittest
 """
 
 class Lamp:
-    # Your code here
-    pass
+      def __init__(self):
+          self.is_on = False
+
+      def toggle(self):
+          if self.is_on == False:
+             self.is_on = True
+          else:
+              self.is_on = False
+
+
+
+
 
 
 class TestLamp(unittest.TestCase):
