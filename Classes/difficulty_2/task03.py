@@ -20,9 +20,12 @@ class Product:
     def __init__(self, name, days_valid):
         self.name = name
         self.days_valid = days_valid
+    def is_expired(self, day_passed):
+        if day_passed > self.days_valid:
+            return True
+        else:
+            return False
 
-    # Your code here
-    pass
 
 
 class TestProductExpiration(unittest.TestCase):
