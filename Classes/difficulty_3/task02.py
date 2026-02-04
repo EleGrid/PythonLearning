@@ -24,8 +24,12 @@ class Child:
         self.age = age
         self.hobbies = []
 
-    # Your code here
-    pass
+    def add_hobby(self, hobby_name):
+        if hobby_name in self.hobbies:
+            return  False
+        else:
+            self.hobbies.append(hobby_name)
+            return True
 
 
 class TestChildHobbies(unittest.TestCase):

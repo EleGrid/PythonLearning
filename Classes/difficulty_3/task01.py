@@ -22,8 +22,12 @@ class ShoppingList:
     def __init__(self):
         self.items = {}
 
-    # Your code here
-    pass
+    def add_item(self, name, quantity):
+        if name in self.items:
+            self.items[name] = self.items[name] + quantity
+        else:
+            self.items[name] = quantity
+
 
 
 class TestShoppingList(unittest.TestCase):
