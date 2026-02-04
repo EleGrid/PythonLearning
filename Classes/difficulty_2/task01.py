@@ -27,8 +27,15 @@ class Wallet:
     def __init__(self):
         self.balance = 0
 
-    # Your code here
-    pass
+    def add_money(self, amount):
+        self.balance = self.balance + amount
+
+    def spend_money(self, amount):
+        if self.balance >= amount:
+            self.balance = self.balance - amount
+            return True
+        else:
+            return False
 
 
 class TestWallet(unittest.TestCase):
