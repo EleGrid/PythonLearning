@@ -23,10 +23,12 @@ class Recipe:
         self.ingredients = ingredients # Dict: {"Egg": 2, "Salt": 1}
 
     def can_cook(self, fridge_items):
-        # Currently the logic is flawed or missing
-        # Implement the check: for each item in self.ingredients, 
-        # check if it exists in fridge_items and amount is >= needed
-        pass
+       for product in self.ingredients:
+           if product in fridge_items and self.ingredients[product] <= fridge_items[product]:
+               continue
+           else:
+               return False
+       return True
 
 
 class TestRecipe(unittest.TestCase):
