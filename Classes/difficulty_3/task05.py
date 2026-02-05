@@ -21,11 +21,14 @@ import unittest
 
 class CleaningSchedule:
     def __init__(self, room_names):
-        # Initialize self.rooms as a dict mapping name -> False
-        pass
+        self.rooms = {}
+        for key_room in room_names:
+            self.rooms[key_room] = False
 
-    # Your code here
-    pass
+    def clean_room(self, room_name):
+        if room_name in self.rooms:
+            self.rooms[room_name] = True
+
 
 
 class TestCleaningUpdate(unittest.TestCase):
