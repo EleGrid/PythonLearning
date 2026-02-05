@@ -1,4 +1,5 @@
 import unittest
+from zlib import DEF_BUF_SIZE
 
 """
 Задача: Книжная полка (List filtering)
@@ -19,10 +20,20 @@ import unittest
 
 class Bookshelf:
     def __init__(self):
-        self.books = []
+        self.books =[]
 
-    # Your code here
-    pass
+    def add_book(self, title, genre):
+        book = {}
+        book["title"] = title
+        book["genre"] = genre
+        self.books.append(book)
+
+    def get_books_by_genre(self, genre):
+        new_list = []
+        for book_2 in self.books:
+            if book_2["genre"] == genre:
+                new_list.append(book_2["title"])
+        return new_list
 
 
 class TestBookshelf(unittest.TestCase):
